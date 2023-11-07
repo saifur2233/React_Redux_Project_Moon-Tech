@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { actionTypes } from "../state/ProductState/actionTypes";
 import {
   productReducer,
@@ -20,7 +14,7 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({ type: actionTypes.FETCHING_START });
-    fetch("http://localhost:5000/products")
+    fetch("https://technet-server-mauve.vercel.app/products")
       .then((res) => res.json())
       .then((data) =>
         dispatch({ type: actionTypes.FETCHING_SUCCESS, payload: data.data })
