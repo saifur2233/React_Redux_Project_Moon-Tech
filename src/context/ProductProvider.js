@@ -17,7 +17,7 @@ const ProductProvider = ({ children }) => {
     fetch("https://technet-server-mauve.vercel.app/products")
       .then((res) => res.json())
       .then((data) =>
-        dispatch({ type: actionTypes.FETCHING_SUCCESS, payload: data.data })
+        dispatch({ type: actionTypes.FETCHING_SUCCESS, payload: data?.data })
       )
       .catch(() => {
         dispatch({ type: actionTypes.FETCHING_ERROR });
