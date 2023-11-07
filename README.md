@@ -1,3 +1,3 @@
-## server
+# Project name: Moon-Tech
 
-server link : https://github.com/mir-hussain/moon-tech-server
+### server link : `https://technet-server-mauve.vercel.app/`
